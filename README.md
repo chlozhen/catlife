@@ -1,4 +1,5 @@
-# NYU-GIS
-NYU Spring 2023 Advanced GIS: Web mapping assignments
+# catlife
 
-View live webpage here: https://chlozhen.github.io/NYU-GIS/
+NYU Spring 2023 Advanced GIS: Web mapping assignment 1-2
+
+View live webpage here: https://chlozhen.github.io/catlife/
