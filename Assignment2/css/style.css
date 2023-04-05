@@ -1,0 +1,105 @@
+html,
+body,
+#container {
+    background-color: #ffcccc;
+    font-family: Georgia, sans-serif;
+}
+
+#title {
+    text-align: center;
+    width: 100%;
+}
+
+.img__wrap {
+    position: relative;
+    display: inline-block;
+    padding: 1px;
+    border-radius: 1px;
+    margin-bottom: 1px;
+    flex: 1 0 50%;
+    box-sizing: border-box;
+}
+
+.img__description_layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(160, 41, 209, 0.6);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img__wrap:hover .img__description_layer {
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.img__description {
+    transition: .5s;
+    transform: translateY(1em);
+    text-align: center;
+}
+
+.img__wrap:hover .img__description {
+    transform: translateY(0);
+}
+
+#cat-gifs {
+    text-align: center;
+    width: 50%;
+    display: flex;
+}
+
+.row {
+    padding: 1px;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    flex: 1 0 30%;
+    box-sizing: border-box;
+}
+
+.question {
+    border: 2px solid purple;
+    padding: 4px;
+    border-radius: 20px;
+    margin-bottom: 4px;
+}
+
+.question:hover {
+    cursor: pointer;
+    background-color: purple;
+}
+
+.jokes {
+    text-align: center;
+    color: black;
+
+}
+
+.answer {
+    border: 2px;
+    padding: 4px;
+    border-radius: 1px;
+    margin-bottom: 4px;
+    background-color: purple;
+}
+
+.answer:hover {
+    cursor: pointer;
+}
+
+#answer-text {
+    text-align: center;
+    color: pink;
+}
+
+#clear-joke-text {
+    text-align: center;
+}
