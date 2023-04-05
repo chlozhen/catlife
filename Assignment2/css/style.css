@@ -1,56 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Styling for general ids/classes */
 html,
 body,
 #container {
-    background-color: #ffcccc;
+    background-color: #e0d3df;
     font-family: Georgia, sans-serif;
 }
 
-#title {
+span {
+    text-decoration: underline;
+    color: rgb(55, 18, 190);
+    cursor: pointer;
+}
+
+.page {
+    margin: 100px;
+    flex: 1 0 50%;
+    text-align: center;
+}
+
+.img {
+    padding: 4px;
+    border-radius: 1px;
+    margin-bottom: 4px;
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* Page: WELCOME */
+#welcome {
+    margin-top: 50px;
     text-align: center;
     width: 100%;
 }
 
-.img__wrap {
-    position: relative;
-    display: inline-block;
-    padding: 1px;
-    border-radius: 1px;
-    margin-bottom: 1px;
-    flex: 1 0 50%;
-    box-sizing: border-box;
-}
 
-.img__description_layer {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(160, 41, 209, 0.6);
-    color: #fff;
-    visibility: hidden;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.img__wrap:hover .img__description_layer {
-    visibility: visible;
-    opacity: 1;
-    cursor: pointer;
-}
-
-.img__description {
-    transition: .5s;
-    transform: translateY(1em);
-    text-align: center;
-}
-
-.img__wrap:hover .img__description {
-    transform: translateY(0);
-}
-
+/* Page: OTHER */
 #cat-gifs {
     text-align: center;
     width: 50%;
@@ -61,8 +50,6 @@ body,
     padding: 1px;
     border-radius: 10px;
     margin-bottom: 2px;
-    flex: 1 0 30%;
-    box-sizing: border-box;
 }
 
 .question {
@@ -102,4 +89,68 @@ body,
 
 #clear-joke-text {
     text-align: center;
+    color: purple;
+}
+
+
+/* Styling to add text layer over gifs/images with hover */
+.img__wrap {
+    position: relative;
+    display: inline-block;
+    padding: 1px;
+    border-radius: 1px;
+    margin-bottom: 1px;
+    flex: 1 0 50%;
+}
+
+.img__description_layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(160, 41, 209, 0.6);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img__wrap:hover .img__description_layer {
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.img__description {
+    transition: .5s;
+    transform: translateY(1em);
+    text-align: center;
+}
+
+.img__wrap:hover .img__description {
+    transform: translateY(0);
+}
+
+
+/* Styling for zoom lens in images */
+.img-magnifier-container {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 1px;
+    margin-bottom: 1px;
+    flex: 100%;
+}
+
+.img-magnifier-glass {
+    position: absolute;
+    border: 3px solid #424040;
+    border-radius: 50%;
+    cursor: pointer;
+    /*Set the size of the magnifier glass:*/
+    width: 100px;
+    height: 100px;
 }
