@@ -1,16 +1,6 @@
-const answer1 = 'PURR-ple'
-const answer2 = 'Just kitten!'
-const answer3 = 'A cat-astrophe.'
-const answer4 = 'They tend to be cheetahs.'
-const clear = 'Hover over a gif for a joke, click for the answer!'
-
-
-
-function revealAnswer(ans) {
-    $('#answer-text').empty().prepend(ans)
-}
-
 function show(elementID) {
+    // showing a "page" elements when clicked
+    // reference: http://jsfiddle.net/H4dbJ/
     var ele = document.getElementById(elementID);
     if (!ele) {
         alert("no such element");
@@ -23,7 +13,22 @@ function show(elementID) {
     ele.style.display = 'block';
 }
 
+function setButtonState(headerID, buttonClass, activeClass) {
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById(headerID);
+    var btns = header.getElementsByClassName(buttonClass);
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName(activeClass);
+            current[0].className = current[0].className.replace(" " + activeClass, "");
+            this.className += " " + activeClass;
+        });
+    }
+}
+
 function magnify(imgID, zoom) {
+    // allow users to use a magnify an image
+    // reference: https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp
     var img, glass, w, h, bw;
     img = document.getElementById(imgID);
 
@@ -84,35 +89,94 @@ function magnify(imgID, zoom) {
     }
 }
 
-function keep(elementID) {
-    var ele = document.getElementById(elementID);
-    
+function revealAnswer(ans) {
+    // Reveal answer text
+    $('#answer-text').empty().prepend(ans)
 }
 
+function removeActive(jokes) {
+    // Remove any active classes
+    $.each(jokes, function (index, value) {
+        const ele = document.getElementById(value)
+        if (ele.classList.contains('active') == true) {
+            $('#' + value).removeClass('active')
+        }
+    });
+}
 
-magnify("miaprofile", 2)
-magnify("ellaprofile", 2)
+// Set page buttons
+setButtonState("page_Header", "page_btn", "page_active")
+
+// Initiate magnifying mechanism
+magnify("miaprofile", 3)
+magnify("ellaprofile", 3)
+
+// Get joke answers and clear them
+const answer1 = 'PURR-ple'
+const answer2 = 'Just kitten!'
+const answer3 = 'A cat-astrophe.'
+const answer4 = 'They tend to be cheetahs.'
+const clear = 'Hover over a gif for a cat joke, click for the answer!'
+const jokes = ["joke1_answer", "joke2_answer", "joke3_answer", "joke4_answer"]
 
 $('.joke1').on('click', function () {
+    removeActive(jokes)
     revealAnswer(answer1)
-    keep("joke1_answer")
+    $('#joke1_answer').addClass('active')
 })
 
 $('.joke2').on('click', function () {
+    removeActive(jokes)
     revealAnswer(answer2)
+    $('#joke2_answer').addClass('active')
 })
 
 $('.joke3').on('click', function () {
+    removeActive(jokes)
     revealAnswer(answer3)
+    $('#joke3_answer').addClass('active')
 })
 
 $('.joke4').on('click', function () {
+    removeActive(jokes)
     revealAnswer(answer4)
+    $('#joke4_answer').addClass('active')
 })
 
 $('.answer').on('click', function () {
+    removeActive(jokes)
     revealAnswer(clear)
 })
+
+// Gallery layout changes (reference: https://www.w3schools.com/howto/howto_js_image_grid.asp)
+var elements = document.getElementsByClassName("gallery_col");
+var i;
+
+// Full-width images
+function large() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.flex = "100%";
+        elements[i].style.msFlex = "100%";
+    }
+}
+
+// Two images side by side
+function medium() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.flex = "50%";
+        elements[i].style.msFlex = "50%";
+    }
+}
+
+// Four images side by side
+function small() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.flex = "25%";
+        elements[i].style.msFlex = "25%";
+    }
+}
+
+setButtonState("gallery_Header", "gallery_btn", "gallery_active")
 
 
 

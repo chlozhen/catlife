@@ -4,100 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIA&ELLA</title>
+    <title>The Cat Life</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div id="container">
-        <div>
-            <h2 id="welcome"> Mia & Ella </h2>
+    <div>
+        <h2 id="welcome"> The Cat Life </h2>
+        <p id="page_Header">
+            <button class="page_btn page_active" onclick="show('Page0');">Home</button>
+            <button class="page_btn" onclick="show('Page1');">Mia</button>
+            <button class="page_btn" onclick="show('Page2');">Ella</button>
+            <button class="page_btn" onclick="show('Page3');">Gallery</button>
+        </p>
+    </div>
 
-            <p id="welcome">
-                <span onclick="show('Page0');">HOME</span>
-                <span onclick="show('Page1');">MIA</span>
-                <span onclick="show('Page2');">ELLA</span>
-                <!-- <span onclick="show('Page3');">OTHER</span> -->
-            </p>
-        </div>
-
-
-        <div id="Page0" class="page">
-            <p>Welcome! Use the headers above to meet Chloe's cats, Mia and Ella. Below, hover over the gifs to see a cat related joke, and click for the answer!</p> 
-            
-            <div id="cat-gifs" class="row">
-                <div class="img__wrap joke1">
-                    <img class="img"
-                        src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmUyNWE3NjAxMTFjNDNkZDY5OGFiMjY5YTQ2M2MxMzcxNzQ1NTYzNyZjdD1n/v6aOjy0Qo1fIA/giphy.gif"
-                        height="200px" />
-                    <div id= "joke1_answer" class="img__description_layer">
-                        <p class="img__description">What's a cats favorite color?</p>
-                    </div>
-                </div>
-                <div class="img__wrap joke2">
-                    <img class="img"
-                        src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmFmOGRlMDY3YmU0NTg1ZWZiMWUxNjFkY2QyMTEyMWM0NTZhMjZhYiZjdD1n/ND6xkVPaj8tHO/giphy.gif"
-                        height="200px"/>
-                    <div class="img__description_layer">
-                        <p class="img__description">What does the cat say after making a joke?</p>
-                    </div>
-                </div>
-                <div class="img__wrap joke3">
-                    <img class="img"
-                        src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjQ5OTdjOTNjMzFjMmFkNDQ5NzIwNzhhNmQyMmM5MGVlMzc4ZWNjYiZjdD1n/W3QKEujo8vztC/giphy.gif"
-                        height="200px"/>
-                    <div class="img__description_layer">
-                        <p class="img__description">What’s it called when all the treats are gone?</p>
-                    </div>
-                </div>
-                <div class="img__wrap joke4">
-                    <img class="img"
-                        src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGM5NzAwOWU5ODkwYWM4ZDQwODg3MzU1Nzc4NTAyNGE3YmZlMDdjMiZjdD1n/NfzERYyiWcXU4/giphy.gif"
-                        height="200px"/>
-                    <div class="img__description_layer">
-                        <p class="img__description">Why don’t you want to play Monopoly with a cat?</p>
-                    </div>
+    <div id="Page0" class="page">
+        <p>Welcome! Use the headers above to meet Chloe's cats, Mia and Ella.</p>
+        <div id="cat-gifs" class="row">
+            <div class="img__wrap joke1">
+                <img class="img"
+                    src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmUyNWE3NjAxMTFjNDNkZDY5OGFiMjY5YTQ2M2MxMzcxNzQ1NTYzNyZjdD1n/v6aOjy0Qo1fIA/giphy.gif"
+                    height="200px" />
+                <div id="joke1_answer" class="img__description_layer">
+                    <p class="img__description">What's a cats favorite color?</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="answer">
-                    <div id="answer-text">
-                        Hover over a gif for a joke, click for the answer!
-                    </div>
+            <div class="img__wrap joke2">
+                <img class="img"
+                    src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmFmOGRlMDY3YmU0NTg1ZWZiMWUxNjFkY2QyMTEyMWM0NTZhMjZhYiZjdD1n/ND6xkVPaj8tHO/giphy.gif"
+                    height="200px" />
+                <div id="joke2_answer" class="img__description_layer">
+                    <p class="img__description">What does the cat say after making a joke?</p>
                 </div>
             </div>
-            <div class="row">
-                <div id="clear-joke-text">
-                    Click purple answer box to reset, and check out more jokes <a target="_blank "
-                        href="https://thoughtcatalog.com/january-nelson/2021/07/cat-jokes/">here</a>!
+            <div class="img__wrap joke3">
+                <img class="img"
+                    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjQ5OTdjOTNjMzFjMmFkNDQ5NzIwNzhhNmQyMmM5MGVlMzc4ZWNjYiZjdD1n/W3QKEujo8vztC/giphy.gif"
+                    height="200px" />
+                <div id="joke3_answer" class="img__description_layer">
+                    <p class="img__description">What’s it called when all the treats are gone?</p>
+                </div>
+            </div>
+            <div class="img__wrap joke4">
+                <img class="img"
+                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGM5NzAwOWU5ODkwYWM4ZDQwODg3MzU1Nzc4NTAyNGE3YmZlMDdjMiZjdD1n/NfzERYyiWcXU4/giphy.gif"
+                    height="200px" />
+                <div id="joke4_answer" class="img__description_layer">
+                    <p class="img__description">Why don’t you want to play Monopoly with a cat?</p>
                 </div>
             </div>
         </div>
-
-
-        <div id="Page1" class="page" style="display:none">
-            <p>Meet Mia! She is a 7 year old torbie, living in Brooklyn, NY with her foster sister Ella. She loves naps and head pats. </p>
-            <p>Use the magnifying glass to zoom in her portrait!</p>
-            <div class="img-magnifier-container">
-                <img id="miaprofile" class="img" src="img/mia.jpg" width="500px" height="700px" alt="MIA" />
+        <div class="row">
+            <div class="answer">
+                <p id="answer-text">
+                    Hover over a gif for a cat joke, click for the answer!
+                </p>
             </div>
         </div>
-
-
-        <div id="Page2" class="page" style="display:none">
-            <p>Meet Ella! She is a 4 year old black short hair, living in Brooklyn, NY with her foster sister Mia. She is an independent individual, frequently hunting for hairties and strings. </p>
-            <p>Use the magnifying glass to zoom in her portrait!</p>
-            <div class="img-magnifier-container">
-                <img id="ellaprofile" class="img" src="img/ella.jpg" width="500px" height="700px" alt="ELLA" />
+        <div class="row">
+            <div id="clear-joke-text">
+                Click purple answer box to reset, and check out more jokes <a target="_blank "
+                    href="https://thoughtcatalog.com/january-nelson/2021/07/cat-jokes/">here</a>!
             </div>
         </div>
+    </div>
 
 
-        <!-- <div id="Page3" class="page" style="display:none">
-            <p>Content of page 3</p>
-        </div> -->
+    <div id="Page1" class="page" style="display:none">
+        <p>Meet Mia! She is a 7 year old torbie, living in Brooklyn, NY with her foster sister Ella. She loves naps
+            and head pats. </p>
+        <p>Use the magnifying glass to zoom in her portrait!</p>
+        <div class="img-magnifier-container">
+            <img id="miaprofile" class="img" src="img/mia.jpg" width="500px" height="700px" alt="MIA" />
+        </div>
+    </div>
 
 
+    <div id="Page2" class="page" style="display:none">
+        <p>Meet Ella! She is a 4 year old black short hair, living in Brooklyn, NY with her foster sister Mia. She
+            is an independent individual, frequently hunting for hairties and strings. </p>
+        <p>Use the magnifying glass to zoom in her portrait!</p>
+        <div class="img-magnifier-container">
+            <img id="ellaprofile" class="img" src="img/ella.jpg" width="500px" height="700px" alt="ELLA" />
+        </div>
+    </div>
+
+
+    <div id="Page3" class="page" style="display:none">
+        <p>Mia and Ella gallery! Plus some bonus pics of the cousins: Vic (Calico) & Lou (Orange)</p>
+        <div class="header" id="gallery_Header">
+            Click buttons to change grid layout:
+            <button class="gallery_btn" onclick="small()">small</button>
+            <button class="gallery_btn gallery_active" onclick="medium()">medium</button>
+            <button class="gallery_btn" onclick="large()">large</button>
+        </div>
+        <div class="gallery_row">
+            <div class="gallery_col">
+                <img src="img/1.jpg" style="width:100%">
+                <img src="img/2.jpg" style="width:100%">
+                <img src="img/3.jpg" style="width:100%">
+                <img src="img/4.jpg" style="width:100%">
+                <img src="img/5.jpg" style="width:100%">
+            </div>
+            <div class="gallery_col">
+                <img src="img/6.jpg" style="width:100%">
+                <img src="img/7.jpg" style="width:100%">
+                <img src="img/8.jpg" style="width:100%">
+                <img src="img/9.jpg" style="width:100%">
+                <img src="img/10.jpg" style="width:100%">
+            </div>
+            <div class="gallery_col">
+                <img src="img/11.jpg" style="width:100%">
+                <img src="img/12.jpg" style="width:100%">
+                <img src="img/13.jpg" style="width:100%">
+                <img src="img/14.jpg" style="width:100%">
+                <img src="img/15.jpg" style="width:100%">
+            </div>
+            <div class="gallery_col">
+                <img src="img/16.jpg" style="width:100%">
+                <img src="img/17.jpg" style="width:100%">
+                <img src="img/18.jpg" style="width:100%">
+                <img src="img/19.jpg" style="width:100%">
+                <img src="img/20.jpg" style="width:100%">
+            </div>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="./js/script.js"></script>
