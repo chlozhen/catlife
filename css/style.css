@@ -69,7 +69,9 @@ button {
     color: purple;
 }
 
-/* Styling to add text layer over gifs/images with hover */
+/* Styling to add text layer over gifs/images with hover 
+   reference: https://stackoverflow.com/questions/53197474/text-transition-on-hover-image;
+              https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp  */
 .img__wrap {
     position: relative;
     display: inline-block;
